@@ -143,8 +143,7 @@ npm-version:
 	$(NPMBIN)/csslint --version
 
 
-
-	# target: upgrade          - Upgrade external LESS modules.
+# target: upgrade          - Upgrade external LESS modules.
 .PHONY: upgrade
 upgrade: upgrade-normalize upgrade-responsive-menu
 		@$(call HELPTEXT,$@)

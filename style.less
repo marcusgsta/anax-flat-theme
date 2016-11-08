@@ -4,6 +4,14 @@
 @import url(modules.less);
 
 /**
+* Body
+*/
+
+body {
+  background-color: khaki;
+}
+
+/**
 * Header
 */
 
@@ -13,11 +21,17 @@
 }
 
 .site-logo-text,
-.navbar2,
 .profile {
   float:left;
-  width: 30%;
+  width: 25%;
 }
+
+.navbar2 {
+  float:left;
+  width: 40%;
+
+}
+
 
 .site-logo-text {
   font-size: 2em;
@@ -32,13 +46,31 @@
 
 .rm-desktop li {
   // background-color: #eee;
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 @navbarItemBgColor: #eee;
+@navbarItemHoverBgColor: #ddd;
+// @navbarItemSelectedBgColor: green;
+
+li.selected-parent a,
+li.selected a {
+  background-color: #c5c5f3;
+}
 
 
 .rm-max .rm-small .rm-button {
       // font-size: 2em;
+}
+
+.rm-mobile li.selected a {
+  color: #000;
+}
+
+.toc li.selected a {
+  background-color: inherit;
 }
 
 @maxButtonFontSize: 2em;
@@ -63,6 +95,16 @@
 img {
     max-width: 100%;
 }
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+
+.article img {
+  border: 3px solid #fff;
+  outline: px solid #222;
+}
+
 
 /**
 * Responsive design
@@ -94,7 +136,7 @@ img {
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 590px) {
     .site-logo-text {
         width: 90%;
     }
