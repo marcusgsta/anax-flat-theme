@@ -1,0 +1,228 @@
+
+// Default grid, change to fit your requirements.
+@columnWidth:   60;
+@gutterWidth:   20;
+@columns:       12;
+
+// Utility variable, you should never need to modify this
+@gridSystemWidth: @columns * (@columnWidth + @gutterWidth) * 1px;
+
+// Set @totalWidth to 100% for a fluid layout
+//@totalWidth: @gridSystemWidth; // Fixed layout
+@totalWidth: 100%;           // Fluid layout
+
+/**
+ * All columns must be wrapped in a row.
+ */
+.row(@columns: @columns) {
+    display: block;
+
+    width: @totalWidth / @gridSystemWidth * (@gridSystemWidth + @gutterWidth);
+
+    margin-left:  -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
+    margin-right: -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
+
+    .clearfix();
+}
+
+/**
+ * Create a column spanning @col columns.
+ */
+.column(@col, @columns: @columns) {
+    display: inline;
+    float: left;
+
+    width: @totalWidth / @gridSystemWidth * (((@columnWidth + @gutterWidth) * @col ) - @gutterWidth);
+
+    margin-left:  @totalWidth / @gridSystemWidth * @gutterWidth / 2;
+    margin-right: @totalWidth / @gridSystemWidth * @gutterWidth / 2;
+}
+
+
+
+// .info {
+//     .column(3);
+// }
+
+/**
+ * A small clearfix:
+ * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
+ */
+.clearfix() {
+    &::after {
+        content: "";
+        display: block;
+        clear:both;
+    }
+}
+
+/**
+ * Wrap grid in a container.
+ */
+.container() {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fixed() {
+    .container();
+    width: @gridSystemWidth - @gutterWidth;
+}
+
+.wrap-all {
+    .container();
+    max-width: 960px;
+}
+
+@totalWidth: 100%;           // Fluid layout
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row {
+    .row();
+}
+
+
+/*
+** Header
+*/
+
+.site-header {
+    .row(6);
+}
+
+.breadcrumb-list ul {
+  list-style-type: none;
+}
+
+.outer-wrap-flash {
+    .column(12);
+    float:none;
+    height: @magicNumber * 8;
+    width: 100%;
+    // margin-top: @magicNumber;
+    // margin-bottom: @magicNumber;
+    margin-left: 0;
+    margin-right: 0;
+
+    .row {
+      margin: 0;
+    }
+
+}
+
+// img.flashy {
+//   height:100% ;
+// }
+
+.flash-wrap {
+  margin: 0;
+}
+
+.outer-wrap-breadcrumb {
+  // height: @magicNumber;
+  margin-bottom: 0;
+}
+
+
+// .outer-wrap-header {
+//
+// }
+
+.main {
+    .column(8);
+    padding-left:10px;
+    margin-bottom: 40px;
+}
+
+.sidebar {
+    .column(3);
+}
+
+.sidebar-right {
+  .column(3);
+  margin-left:-2px;
+}
+
+.next {
+  float:right;
+}
+
+
+/*
+** Footer
+*/
+
+
+.outer-wrap-footer {
+    clear: both;
+    // margin: 40px 0 22px 0;
+    background-color: burlywood;
+    // padding: 20px 100px 20px 100px;
+    ul{
+    list-style-type: none;
+    margin-left: 0;
+    text-align:left;
+    }
+}
+
+.footer-column {
+  .column(4);
+    ul {
+        // margin: 0;
+        // padding: 1em;
+        // list-style-type: none;
+    }
+}
+
+.footer-column-1 {
+  padding-left:10px;
+}
+.footer-column-2 {
+  padding-left: 5px;
+}
+.footer-column-3 {
+  padding-left: 0;
+
+}
+
+img.byline {
+  // .column(3);
+  // float:left;
+  // padding: 0 6px 0 6px;
+}
+
+p.byline {
+  word-break: break-word;
+}
+
+.site-footer {
+  clear:both;
+  text-align:center;
+  ul.footy {
+    display:inline-block;
+    margin-left: -50px;
+    // .column(5);
+
+    li {
+    float:left;
+    display:inline;
+    }
+    li.footy-item1 {
+      padding-right: 10px;
+    }
+
+  }
+}
+
+.toc h4 {
+  padding-left:10px;
+}
+.has-sidebar-left {
+  padding-left: 2px;
+}
+
+.showGrid(960);
