@@ -13,19 +13,16 @@
 6. Article img
 7. footer
 8. Typography
-9. Styles for colorful theme
 
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@BGColor: khaki;
 @navbarItemBgColor: #eee;
 @navbarItemHoverBgColor: #ddd;
-@footerBackgroundColor: burlywood;
+// @navbarItemSelectedBgColor: green;
 @maxButtonFontSize: 2em;
-@navbarHoverBgColor: #dddddd;
 
 
 /*-------------------------------------------------------------------
@@ -39,8 +36,7 @@
 */
 
 body {
-  background-color: @BGColor;
-
+  background-color: #f1e150;
 }
 
 /*-------------------------------------------------------------------
@@ -81,13 +77,12 @@ body {
   }
   a:hover {
     text-decoration: none;
-    background-color: @navbarHoverBgColor;
   }
 }
 
 li.selected-parent a,
 li.selected a {
-  background-color: #c5c5f3;
+  background-color: #3c7eaf;
 }
 
 .rm-max .rm-small .rm-button {
@@ -117,7 +112,8 @@ li.selected a {
 */
 
 .outer-wrap-footer {
-  background-color: @footerBackgroundColor;
+  background-color: #de9536;
+
 
 }
 .footer {
@@ -219,41 +215,4 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     .font();
-}
-
-/*
-* 9. Colorful theme
-Less Variables */
-
-@BGColor: blue;
-
-html.colorful {
-
-    background-color: gray;
-
-    .rm-desktop li {
-      height: @magicNumber * 2;
-      a {
-        padding: 0.75em;
-      }
-      a:hover {
-        text-decoration: none;
-        background-color: @BGColor;
-      }
-    }
-
-    li.selected-parent a,
-    li.selected a {
-      background-color: #c5c5f3;
-
-
-
-
-
-  }
-
-
-
-
-
 }

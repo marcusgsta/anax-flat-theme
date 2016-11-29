@@ -13,19 +13,18 @@
 6. Article img
 7. footer
 8. Typography
-9. Styles for colorful theme
 
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@BGColor: khaki;
-@navbarItemBgColor: #eee;
-@navbarItemHoverBgColor: #ddd;
-@footerBackgroundColor: burlywood;
-@maxButtonFontSize: 2em;
+@navbarItemBgColor: #dddddd;
 @navbarHoverBgColor: #dddddd;
+// @navbarItemSelectedBgColor: green;
+@maxButtonFontSize: 2em;
+@BGColor: #ffffff;
+@footerBackgroundColor: #eeeeee;
 
 
 /*-------------------------------------------------------------------
@@ -40,7 +39,6 @@
 
 body {
   background-color: @BGColor;
-
 }
 
 /*-------------------------------------------------------------------
@@ -87,7 +85,7 @@ body {
 
 li.selected-parent a,
 li.selected a {
-  background-color: #c5c5f3;
+  background-color: @navbarHoverBgColor;
 }
 
 .rm-max .rm-small .rm-button {
@@ -219,41 +217,4 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     .font();
-}
-
-/*
-* 9. Colorful theme
-Less Variables */
-
-@BGColor: blue;
-
-html.colorful {
-
-    background-color: gray;
-
-    .rm-desktop li {
-      height: @magicNumber * 2;
-      a {
-        padding: 0.75em;
-      }
-      a:hover {
-        text-decoration: none;
-        background-color: @BGColor;
-      }
-    }
-
-    li.selected-parent a,
-    li.selected a {
-      background-color: #c5c5f3;
-
-
-
-
-
-  }
-
-
-
-
-
 }

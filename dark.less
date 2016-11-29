@@ -13,19 +13,24 @@
 6. Article img
 7. footer
 8. Typography
-9. Styles for colorful theme
 
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@BGColor: khaki;
-@navbarItemBgColor: #eee;
+@navbarItemBgColor: #3f4448;
 @navbarItemHoverBgColor: #ddd;
-@footerBackgroundColor: burlywood;
+@navbarSelectedBgColor: #3f4448;
+
 @maxButtonFontSize: 2em;
-@navbarHoverBgColor: #dddddd;
+@backgroundColor: #000;
+@footerBackgroundColor: #332f2f;
+@color: #ada0a0;
+@footerColor: #ada0a0;
+@linkColor: #39a9e6;
+@linkColorVisited:#7a35c5;
+
 
 
 /*-------------------------------------------------------------------
@@ -39,8 +44,8 @@
 */
 
 body {
-  background-color: @BGColor;
-
+  background-color: @backgroundColor;
+  color: @color;
 }
 
 /*-------------------------------------------------------------------
@@ -81,21 +86,21 @@ body {
   }
   a:hover {
     text-decoration: none;
-    background-color: @navbarHoverBgColor;
   }
 }
 
 li.selected-parent a,
 li.selected a {
-  background-color: #c5c5f3;
+  background-color: @navbarSelectedBgColor;
 }
+
 
 .rm-max .rm-small .rm-button {
       // font-size: 2em;
 }
 
 .rm-mobile li.selected a {
-  color: #000;
+  color: #fff;
 }
 
 .toc li.selected a {
@@ -118,10 +123,18 @@ li.selected a {
 
 .outer-wrap-footer {
   background-color: @footerBackgroundColor;
+  color: @footerColor;
+
 
 }
 .footer {
   margin-left: 0;
+}
+.footer a {
+  color: @linkColor;
+}
+.footer a:visited {
+  color: @linkColorVisited;
 }
 
 
@@ -219,41 +232,4 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     .font();
-}
-
-/*
-* 9. Colorful theme
-Less Variables */
-
-@BGColor: blue;
-
-html.colorful {
-
-    background-color: gray;
-
-    .rm-desktop li {
-      height: @magicNumber * 2;
-      a {
-        padding: 0.75em;
-      }
-      a:hover {
-        text-decoration: none;
-        background-color: @BGColor;
-      }
-    }
-
-    li.selected-parent a,
-    li.selected a {
-      background-color: #c5c5f3;
-
-
-
-
-
-  }
-
-
-
-
-
 }
