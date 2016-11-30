@@ -19,10 +19,16 @@
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@navbarItemBgColor: #eee;
-@navbarItemHoverBgColor: #ddd;
-// @navbarItemSelectedBgColor: green;
+@backgroundColor: #CEC044;
+@navbarHoverBgColor: #9B9133;
+@navbarSelectedBgColor: #9B9133;
+@footerBackgroundColor: #9B9133;
+
 @maxButtonFontSize: 2em;
+// @color: #ada0a0;
+// @footerColor: #ada0a0;
+// @linkColor: #39a9e6;
+// @linkColorVisited:#7a35c5;
 
 
 /*-------------------------------------------------------------------
@@ -36,7 +42,7 @@
 */
 
 body {
-  background-color: #f1e150;
+  background-color: @backgroundColor;
 }
 
 /*-------------------------------------------------------------------
@@ -77,12 +83,13 @@ body {
   }
   a:hover {
     text-decoration: none;
+    background-color: @navbarHoverBgColor;
   }
 }
 
 li.selected-parent a,
 li.selected a {
-  background-color: #3c7eaf;
+  background-color: @navbarSelectedBgColor;
 }
 
 .rm-max .rm-small .rm-button {
@@ -92,6 +99,7 @@ li.selected a {
 .rm-mobile li.selected a {
   color: #000;
 }
+
 
 .toc li.selected a {
   background-color: inherit;
@@ -112,7 +120,7 @@ li.selected a {
 */
 
 .outer-wrap-footer {
-  background-color: #de9536;
+  background-color: @footerBackgroundColor;
 
 
 }

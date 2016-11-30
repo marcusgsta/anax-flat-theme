@@ -13,6 +13,7 @@
 6. Article img
 7. footer
 8. Typography
+9. Responsive
 
 -------------------------------------------------------------------*/
 
@@ -32,6 +33,11 @@
 */
 
 @import url(modules.less);
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Sahitya');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+
 
 /*-------------------------------------------------------------------
 3. Body
@@ -39,7 +45,6 @@
 
 body {
   background-color: @BGColor;
-
 }
 
 /*-------------------------------------------------------------------
@@ -204,8 +209,8 @@ h5 {
 /**
  * Default font-families
  */
-@fontFamilyHeadings:  @fontFamilyCambria;
-@fontFamilyBody:      @fontFamilyHelvetica;
+@fontFamilyHeadings:  'Great Vibes', cursive; //@fontFamilyCambria;
+@fontFamilyBody:      @fontFamilyGaramond; //@fontFamilyHelvetica;
 @fontFamilyCode:      @fontFamilyCourier;
 
 h1, h2, h3, h4, h5, h6 {
@@ -218,4 +223,55 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     .font();
+}
+
+.site-logo-text a {
+  font-family: 'Great Vibes', cursive;
+}
+
+.rm-navbar ul{
+  font-family: 'Special Elite', cursive;
+}
+
+/*
+** 9. Responsive
+*/
+
+@media screen and (min-width: 901px) {
+    .site-logo-text {
+        width: 15%;
+    }
+
+    .navbar2 {
+        width: 80%;
+    }
+
+    .profile {
+        width: 5%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 15%;
+    }
+
+    .navbar2 {
+        width: 80%;
+    }
+
+    .profile {
+        width: 5%;
+    }
+}
+
+
+@media screen and (max-width: 925px) {
+    .site-logo-text {
+        width: 90%;
+    }
+
+    .navbar2 {
+        display:none;
+    }
 }

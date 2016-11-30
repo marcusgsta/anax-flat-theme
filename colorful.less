@@ -13,20 +13,23 @@
 6. Article img
 7. footer
 8. Typography
+9. Styles for colorful theme
 
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@BGColor: khaki;
-@navbarItemBgColor: #eee;
-@navbarItemHoverBgColor: #ddd;
-@footerBackgroundColor: burlywood;
+
+
+@navbarSelectedBgColor:#AA6BF2;
+@navbarHoverBgColor: #5BF489;
+@BGColor: #A37635;
+@footerBackgroundColor: #A37635;
+@outer-BGColor: #BD8434;
+
+
 @maxButtonFontSize: 2em;
-@navbarHoverBgColor: #dddddd;
-
-
 /*-------------------------------------------------------------------
 2. Imports
 */
@@ -38,7 +41,12 @@
 */
 
 body {
+
   background-color: @BGColor;
+
+  .outer-wrap-main {
+    background-color: @outer-BGColor;
+  }
 
 }
 
@@ -46,6 +54,11 @@ body {
 4. Header
 */
 
+.outer-wrap-header {
+  background-color: #BDB615;
+  width: 100%;
+  max-width: none;
+}
 .site-logo-text {
   font-size: 2em;
 
@@ -86,7 +99,7 @@ body {
 
 li.selected-parent a,
 li.selected a {
-  background-color: #c5c5f3;
+  background-color: @navbarSelectedBgColor;
 }
 
 .rm-max .rm-small .rm-button {

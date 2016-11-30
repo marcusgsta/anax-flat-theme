@@ -19,9 +19,8 @@
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@navbarItemBgColor: #3f4448;
 @navbarItemHoverBgColor: #ddd;
-@navbarSelectedBgColor: #3f4448;
+@navbarSelectedBgColor: #0053A3;
 
 @maxButtonFontSize: 2em;
 @backgroundColor: #000;
@@ -30,6 +29,9 @@
 @footerColor: #ada0a0;
 @linkColor: #39a9e6;
 @linkColorVisited:#7a35c5;
+
+@headerBGColor: #F09E18;
+
 
 
 
@@ -48,16 +50,27 @@ body {
   color: @color;
 }
 
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+  color: #000;
+}
+
 /*-------------------------------------------------------------------
 4. Header
 */
 
+.wrap-all {
+  width: 100%;
+  max-width: none;
+}
+.outer-wrap-header {
+  background-color: @headerBGColor;
+}
 .site-logo-text {
   font-size: 2em;
 
   a {
     text-decoration: none;
-    color: #222;
+    color: #000;
   }
 }
 
@@ -83,6 +96,7 @@ body {
   height: @magicNumber * 2;
   a {
     padding: 0.75em;
+    color: #000;
   }
   a:hover {
     text-decoration: none;
