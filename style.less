@@ -11,7 +11,7 @@
 4. Header .site-logo-text
 5. Navigation .rm-desktop
 6. Article img
-7. footer
+7. Footer
 8. Typography
 9. Tables
 
@@ -35,12 +35,19 @@
 @import url(modules.less);
 
 /*-------------------------------------------------------------------
-3. Body
+3. Body / main
 */
 
 body {
   background-color: @BGColor;
+}
 
+// main for .route-grid
+.route-grid {
+    .main {
+        background-color:green;
+        opacity: 0.5;
+    }
 }
 
 /*-------------------------------------------------------------------
@@ -67,6 +74,22 @@ body {
         vertical-align: bottom;
     }
 }
+
+// Header for .route-grid
+.route-grid {
+    .site-logo-text {
+        background-color: red;
+        opacity: 0.5;
+    }
+}
+
+.route-grid {
+    .navbar2 {
+        background-color: yellow;
+        opacity: 0.5;
+    }
+}
+
 
 
 /*-------------------------------------------------------------------
@@ -118,11 +141,36 @@ li.selected a {
 
 .outer-wrap-footer {
   background-color: @footerBackgroundColor;
-
 }
 .footer {
   margin-left: 0;
 }
+// Footer for .route-grid
+.route-grid {
+
+    .outer-wrap-footer {
+        background-color: black;
+        color: white;
+        a {
+            color: yellow;
+        }
+    }
+}
+.route-grid {
+    .footer-column {
+        background-color: brown;
+        opacity: 0.5;
+    }
+}
+
+.route-grid {
+    .site-footer {
+        background-color: blue;
+        opacity: 0.5;
+        color: white;
+    }
+}
+
 
 
 /*-------------------------------------------------------------------
