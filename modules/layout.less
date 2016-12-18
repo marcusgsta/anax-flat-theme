@@ -72,13 +72,16 @@ X. Responsive design
     .row();
 }
 //
+.row {
+    .column(24);
+}
 
 /*
 ** Header
 */
 
 .site-header {
-    .row(24);
+    .column(24);
 }
 
 .site-header {
@@ -127,10 +130,10 @@ X. Responsive design
     .column(@columns);
 }
 
-.main {
-    .column(20);
-    .push(2);
-}
+// .main {
+//     .column(20);
+//     .push(2);
+// }
 
 .footer-column {
     .column(@columns / 3);
