@@ -40,7 +40,7 @@
 
 body {
   background-color: @BGColor;
-  max-width: 1100px;
+  
 
 }
 
@@ -153,6 +153,8 @@ img {
 .outer-wrap-footer {
   background-color: @footerBackgroundColor;
   border-radius: 20px;
+  clear:both;
+  overflow:auto;
 
 }
 .footer {
@@ -302,5 +304,12 @@ body {
     }
     th {
         width: 200px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+
+    .navbar2 {
+        display:none;
     }
 }

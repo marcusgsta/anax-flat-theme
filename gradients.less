@@ -20,7 +20,7 @@
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-@BGColor: khaki;
+@BGColor: pink;
 @navbarItemBgColor: #eee;
 @navbarItemHoverBgColor: #ddd;
 @footerBackgroundColor: burlywood;
@@ -32,14 +32,108 @@
 2. Imports
 */
 
-@import url(modules.less);
+// Reset, or normalize the browser style
+@import url(normalize.less);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+// Regions
+// @import url(regions.less);
+
+// Responsive menu
+@import url(responsive-menu.less);
+
+// Grids
+@import url(grid-float.less);
+// @import url(grid-flex.less);
+
+@import url(grid.less);
+// showGrid
+@import url(grid-helpers.less);
+// showHGrid
+@import url(hgrid-helper.less);
+
+// Typography modules
+@import url(typography-sizes.less);
+@import url(typography-defaults.less);
+@import url(typography-font-families.less);
+@import url(typography-mixins.less);
+
+// Images / figure
+@import url(figure.less);
+
 
 /*-------------------------------------------------------------------
-3. Body / main
+3. html / body / main
 */
+
+html {
+
+}
 
 body {
   background-color: @BGColor;
+  background: -moz-linear-gradient( top ,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 0, 1) 15%,
+    rgba(0, 255, 0, 1) 30%,
+    rgba(0, 255, 255, 1) 50%,
+    rgba(0, 0, 255, 1) 65%,
+    rgba(255, 0, 255, 1) 80%,
+    rgba(255, 0, 0, 1) 100%);
+background: -webkit-gradient(linear,  left top,  left bottom,
+    color-stop(0%, rgba(255, 0, 0, 1)),
+    color-stop(15%, rgba(255, 255, 0, 1)),
+    color-stop(30%, rgba(0, 255, 0, 1)),
+    color-stop(50%, rgba(0, 255, 255, 1)),
+    color-stop(65%, rgba(0, 0, 255, 1)),
+    color-stop(80%, rgba(255, 0, 255, 1)),
+    color-stop(100%, rgba(255, 0, 0, 1)));
+
+}
+html {
+    text-align:center;
+}
+
+body {
+    // width: 700px;
+    // margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.toc li {
+    float:left;
+    list-style-type: none;
+    padding-right:5px;
+}
+
+.main {
+    width: 700px;
+    margin: 30px auto;
+    clear:both;
+    border: 5px dotted blue;
+    border-radius: 20%;
+    // margin: 30px 30px 30px 30px;
+}
+
+.flashy {
+
+}
+
+.has-sidebar-right {
+
+}
+.sidebar-left {
+    width: 700px;
+    margin: 0 auto 80px auto;
+}
+.has-sidebar-left {
+
+}
+.sidebar-right {
+    width: 700px;
+    margin: 0 auto 80px auto;
 }
 
 // main for .route-grid
@@ -50,9 +144,46 @@ body {
     }
 }
 
+.next {
+  float:right;
+}
+.previous {
+    float:left;
+}
+
 /*-------------------------------------------------------------------
 4. Header
 */
+
+.site-header {
+    background: -moz-linear-gradient( top ,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 255, 0, 1) 15%,
+      rgba(0, 255, 0, 1) 30%,
+      rgba(0, 255, 255, 1) 50%,
+      rgba(0, 0, 255, 1) 65%,
+      rgba(255, 0, 255, 1) 80%,
+      rgba(255, 0, 0, 1) 100%);
+  background: -webkit-gradient(linear,  left top,  left bottom,
+      color-stop(0%, rgba(255, 0, 0, 1)),
+      color-stop(15%, rgba(255, 255, 0, 1)),
+      color-stop(30%, rgba(0, 255, 0, 1)),
+      color-stop(50%, rgba(0, 255, 255, 1)),
+      color-stop(65%, rgba(0, 0, 255, 1)),
+      color-stop(80%, rgba(255, 0, 255, 1)),
+      color-stop(100%, rgba(255, 0, 0, 1)));
+
+}
+
+.site-header {
+
+}
+.flashy {
+    display:none;
+}
+a {
+    text-decoration:none;
+}
 
 .site-logo-text {
   font-size: 2em;
@@ -141,9 +272,36 @@ li.selected a {
 
 .outer-wrap-footer {
   background-color: @footerBackgroundColor;
+  clear:both;
+  overflow:auto;
+  background: -moz-linear-gradient( top ,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 0, 1) 15%,
+    rgba(0, 255, 0, 1) 30%,
+    rgba(0, 255, 255, 1) 50%,
+    rgba(0, 0, 255, 1) 65%,
+    rgba(255, 0, 255, 1) 80%,
+    rgba(255, 0, 0, 1) 100%);
+background: -webkit-gradient(linear,  left top,  left bottom,
+    color-stop(0%, rgba(255, 0, 0, 1)),
+    color-stop(15%, rgba(255, 255, 0, 1)),
+    color-stop(30%, rgba(0, 255, 0, 1)),
+    color-stop(50%, rgba(0, 255, 255, 1)),
+    color-stop(65%, rgba(0, 0, 255, 1)),
+    color-stop(80%, rgba(255, 0, 255, 1)),
+    color-stop(100%, rgba(255, 0, 0, 1)));
 }
 .footer {
   margin-left: 0;
+}
+.site-footer {
+    background-color:transparent;
+    clear:both;
+}
+.footer-column {
+    background-color: transparent;
+    width:33%;
+    float:left;
 }
 // Footer for .route-grid
 .route-grid {
@@ -288,7 +446,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 820px) {
 
     .navbar2 {
         display:none;

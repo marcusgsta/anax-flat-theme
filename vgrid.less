@@ -9,6 +9,10 @@
 // // Responsive menu
 // @import url(responsive-menu.less);
 
+html.vgrid .inner-wrap,
+html.hgrid .inner-wrap {
+    overflow:auto;
+}
 
 @magicNumber: 24px;
 body {
@@ -129,4 +133,11 @@ body {
 
 .sidebar-right {
     .column(2);
+}
+
+@media screen and (max-width: 1270px) {
+
+    .navbar2 {
+        display:none;
+    }
 }

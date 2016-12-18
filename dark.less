@@ -51,7 +51,7 @@ body {
 }
 
 .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
-  color: #000;
+  color: #fff;
 }
 
 /*-------------------------------------------------------------------
@@ -91,12 +91,14 @@ body {
 5. Navigation
 */
 
-
+.navbar2 {
+    color:white;
+}
 .rm-desktop li {
   height: @magicNumber * 2;
   a {
     padding: 0.75em;
-    color: #000;
+    color: #fff;
   }
   a:hover {
     text-decoration: none;
@@ -110,7 +112,7 @@ li.selected a {
 
 
 .rm-max .rm-small .rm-button {
-      // font-size: 2em;
+    color: #fff;
 }
 
 .rm-mobile li.selected a {
@@ -246,4 +248,12 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     .font();
+}
+
+
+@media screen and (max-width: 1085px) {
+
+    .navbar2 {
+        display:none;
+    }
 }

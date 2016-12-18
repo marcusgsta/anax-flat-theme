@@ -11,25 +11,23 @@
 4. Header .site-logo-text
 5. Navigation .rm-desktop
 6. Article img
-7. footer
+7. Footer
 8. Typography
-9. Styles for colorful theme
+9. Tables
 
 -------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------
 1. LESS Variables
 */
-
-
-@navbarSelectedBgColor:#AA6BF2;
-@navbarHoverBgColor: #5BF489;
-@BGColor: #A37635;
-@footerBackgroundColor: #A37635;
-@outer-BGColor: #BD8434;
-
-
+@BGColor: transparent;
+@navbarItemBgColor: #eee;
+@navbarItemHoverBgColor: #ddd;
+@footerBackgroundColor: burlywood;
 @maxButtonFontSize: 2em;
+@navbarHoverBgColor: #dddddd;
+
+
 /*-------------------------------------------------------------------
 2. Imports
 */
@@ -37,28 +35,35 @@
 @import url(modules.less);
 
 /*-------------------------------------------------------------------
-3. Body
+3. Body / main
 */
 
 body {
-
   background-color: @BGColor;
+}
 
-  .outer-wrap-main {
-    background-color: @outer-BGColor;
-  }
+.flashy {
+    display:none;
+}
 
+html {
+    background-image: url('../image/owl.png?w=300'), url('../image/by-the-pond.jpg?w=2000&f=brightness,140');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, top left;
+}
+
+// main for .route-grid
+.route-grid {
+    .main {
+        background-color:green;
+        opacity: 0.5;
+    }
 }
 
 /*-------------------------------------------------------------------
 4. Header
 */
 
-.outer-wrap-header {
-  background-color: #BDB615;
-  width: 100%;
-  max-width: none;
-}
 .site-logo-text {
   font-size: 2em;
 
@@ -80,6 +85,22 @@ body {
     }
 }
 
+// Header for .route-grid
+.route-grid {
+    .site-logo-text {
+        background-color: red;
+        opacity: 0.5;
+    }
+}
+
+.route-grid {
+    .navbar2 {
+        background-color: yellow;
+        opacity: 0.5;
+    }
+}
+
+
 
 /*-------------------------------------------------------------------
 5. Navigation
@@ -99,7 +120,7 @@ body {
 
 li.selected-parent a,
 li.selected a {
-  background-color: @navbarSelectedBgColor;
+  background-color: #c5c5f3;
 }
 
 .rm-max .rm-small .rm-button {
@@ -119,10 +140,10 @@ li.selected a {
 */
 
 
-.article img {
-  border: 3px solid #fff;
-  outline: px solid #222;
-}
+// .article img {
+//   border: 3px solid #fff;
+//   outline: px solid #222;
+// }
 
 /*-------------------------------------------------------------------
 7. Footer
@@ -130,11 +151,39 @@ li.selected a {
 
 .outer-wrap-footer {
   background-color: @footerBackgroundColor;
-
+  clear:both;
+  overflow:auto;
 }
+
 .footer {
   margin-left: 0;
 }
+// Footer for .route-grid
+.route-grid {
+
+    .outer-wrap-footer {
+        background-color: black;
+        color: white;
+        a {
+            color: yellow;
+        }
+    }
+}
+.route-grid {
+    .footer-column {
+        background-color: brown;
+        opacity: 0.5;
+    }
+}
+
+.route-grid {
+    .site-footer {
+        background-color: blue;
+        opacity: 0.5;
+        color: white;
+    }
+}
+
 
 
 /*-------------------------------------------------------------------
@@ -233,8 +282,26 @@ body {
     .font();
 }
 
+/**
+ * 9. Tables
+ */
 
-@media screen and (max-width: 1085px) {
+.route-analysis-speed-and-usability {
+    table {
+        text-align:center;
+    }
+    table, th, td {
+    border: 2px solid black;
+    }
+    td {
+        font-size: 1.1em;
+    }
+    th {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
 
     .navbar2 {
         display:none;

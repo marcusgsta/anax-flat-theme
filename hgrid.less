@@ -23,8 +23,20 @@
 //     }
 // }
 
+html.vgrid .inner-wrap,
+html.hgrid .inner-wrap {
+    overflow:auto;
+}
+
 html.hgrid .inner-wrap {
     @gridImage: "../img/grid/magic-number-24.png";
     .showHGrid(@gridImage);
 }
 // #hgrid
+
+@media screen and (max-width: 1070px) {
+
+    .navbar2 {
+        display:none;
+    }
+}
